@@ -1,0 +1,20 @@
+<div class="card bg-light mb-3 my-5">
+    <div class="card-header">paisajes</div>
+    <div class="card-body">
+        <h5 class="card-title">Listado de paisajes</h5>
+        <div class="my-2 text-left">
+            <button class="btn btn-rounded btn-primary" type="button" [routerLink]="['/paisajes/form']">Crear Tareas</button>
+        </div>
+        <div>
+            <div *ngFor="let paisaje of repositorioPaisaje">
+                <p><strong>Id:</strong> {{paisaje.id}}</p>
+                <p><strong>Nombre:</strong> {{paisaje.nombre}}</p>
+                <p><strong>Ubicación:</strong> {{paisaje.ubicacion}}</p>
+                <p><strong>Tipo:</strong> {{paisaje.tipo}}</p>
+                <p><strong>Altitud:</strong> {{paisaje.altitud}}</p>
+                <p><strong>Longitud:</strong> {{paisaje.longitud}}</p>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>
